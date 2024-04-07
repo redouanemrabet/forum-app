@@ -46,13 +46,11 @@
       <div class="row row-cols-1 row-cols-md-4">
         <div *ngFor="let question of filteredQuestionList" class="col-md-4 mb-3" style="width: 50%">
           <div class="card rounded-card">
-            <button type="button" class="btn mt-2 btn-outline-danger btn-sm position-absolute top-0 end-0 me-2">
-              <i class="fas fa-trash-alt"></i>
-            </button>
+           
             <div class="card-body">
               <div class="d-flex align-items-center mb-3">
-                <img src="{{ question.user.profilePicture }}" class="rounded-circle me-2" width="50" height="50" alt="Profile Picture">
-                <h6 class="card-subtitle mb-0">{{ question.user.fullName }}</h6>
+                <img src="{{ question.user?.profilePicture }}" class="rounded-circle me-2" width="50" height="50" alt="Profile Picture">
+                <h6 class="card-subtitle mb-0">{{ question.user?.fullName }}</h6>
               </div>
               <h5 class="card-title">{{question.question}}</h5>
               <p class="card-text">{{question.descriptionQuestion}}</p>

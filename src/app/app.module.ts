@@ -17,6 +17,8 @@ import { AddQuestionComponent } from './forum/add-question/add-question.componen
 import { ShowMessageAnswersComponent } from './forum/show-message-answers/show-message-answers.component';
 import { AddAnswerComponent } from './forum/add-answer/add-answer.component';
 import { ForumComponent } from './forum/forum.component';
+import { UpdateQuestionComponent } from './forum/update-question/update-question.component';
+import { ModalPopupComponent } from './components/modal-popup/modal-popup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { ForumComponent } from './forum/forum.component';
     AddQuestionComponent,
     ShowMessageAnswersComponent,
     AddAnswerComponent,
-    ForumComponent
+    ForumComponent,
+    UpdateQuestionComponent,
+    ModalPopupComponent
   ],
   imports: [
     BrowserModule,

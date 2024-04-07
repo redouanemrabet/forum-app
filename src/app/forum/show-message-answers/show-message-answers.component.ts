@@ -1,7 +1,7 @@
 import { questions } from './../../mock-data/questions';
 import { Component, OnInit } from '@angular/core';
 import { Question } from 'src/app/models/Question';
-import { QuestionService } from 'src/app/service/service-forum/question.service';
+import { storageQuestion } from 'src/app/service/service-forum/storage.question.service';
 
 @Component({
   selector: 'app-show-message-answers',
@@ -10,7 +10,7 @@ import { QuestionService } from 'src/app/service/service-forum/question.service'
 })
 export class ShowMessageAnswersComponent implements OnInit{
   question? :Question;
-  constructor(private  questionService : QuestionService) {}
+  constructor(private  questionService : storageQuestion) {}
 
 
   ngOnInit(): void {
@@ -22,6 +22,13 @@ export class ShowMessageAnswersComponent implements OnInit{
      });
 
   }
+  deleteQuestion(){
+
+  }
+  onDeleteConfirmed() {
+    // Call your delete question method here
+  }
+
 
 
 

@@ -1,7 +1,7 @@
 import { questions } from './../mock-data/questions';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { QuestionService } from '../service/service-forum/question.service';
+import { storageQuestion } from '../service/service-forum/storage.question.service';
 import { Question } from '../models/Question';
 
 @Component({
@@ -14,7 +14,7 @@ export class ForumComponent implements OnInit {
   filteredQuestionList: any[] = [];
   searchForm?: any;
 
-  constructor(private fb: FormBuilder,private questionService:QuestionService) { }
+  constructor(private fb: FormBuilder,private storageQuestionService:storageQuestion) { }
 
   ngOnInit(): void {
     this.searchForm = this.fb.group({
@@ -41,8 +41,8 @@ export class ForumComponent implements OnInit {
 
   sendQuestion(question:Question) {
     console.log(question)
-    this.questionService.setQuestion(question);
-    this.questionService.getQuestion().subscribe(question => {
+    this.storageQuestionService.setQuestion(question);
+    this.storageQuestionService.getQuestion().subscribe(question => {
      console.log(question);
     });
   }

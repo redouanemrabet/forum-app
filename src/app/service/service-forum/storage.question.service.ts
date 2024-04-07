@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class QuestionService {
+export class storageQuestion {
   private questionSubject: BehaviorSubject<Question | null> = new BehaviorSubject<Question | null>(null);
 
   constructor() { }
